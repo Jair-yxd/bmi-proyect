@@ -16,7 +16,6 @@ int main()
 
     printf("Su índice de masa corporal es: %.1f\n", imc);
 
-    // Muestra la tabla de referencia
     printf("\nIndice|Condicion\n");
     printf("Menor a 18.5|Bajo peso\n");
     printf("18.5 - 24.9|Normal\n");
