@@ -2,16 +2,26 @@
 
 int main()
 {
-    float peso;
-    float altura;
+    float peso = 0;
+    float altura = 0;
     float imc;
 
-    printf("Ingrese su peso en kg: ");
-    scanf("%f", &peso);
+    while (peso <= 0) {
+        printf("Ingrese su peso en kg: ");
+        scanf("%f", &peso);
+        if (peso <= 0) {
+            printf("Error: El peso debe ser un número positivo.\n");
+        }
+    }
 
-    printf("Ingrese su altura en metros: ");
-    scanf("%f", &altura);
-    
+    while (altura <= 0) {
+        printf("Ingrese su altura en metros: ");
+        scanf("%f", &altura);
+        if (altura <= 0) {
+            printf("Error: La altura debe ser un número positivo.\n");
+        }
+    }
+
     imc = (peso/(altura * altura));
 
     printf("Su índice de masa corporal es: %.1f\n", imc);
@@ -19,7 +29,7 @@ int main()
     printf("\nIndice|Condicion\n");
     printf("Menor a 18.5|Bajo peso\n");
     printf("18.5 - 24.9|Normal\n");
-    printf("25.0 - 29.9| Sobrepeso\n");
+    printf("25.0 - 29.9|Sobrepeso\n");
     printf("30.0 o más|Obesidad\n");
     
     if (imc < 18.5) {
@@ -37,3 +47,5 @@ int main()
 
     return 0;
 }
+
+// link repositorio: https://github.com/Jair-yxd/bmi-proyect
